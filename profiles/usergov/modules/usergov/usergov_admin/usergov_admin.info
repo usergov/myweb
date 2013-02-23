@@ -1,0 +1,7 @@
+name = usergov_admin
+description = "Provides configuration options and administration functionality"
+package = "UserGov"
+
+version = 1.0
+core = 7.x
+php = 5.x

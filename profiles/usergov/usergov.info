@@ -24,11 +24,12 @@ dependencies[] = toolbar
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
-dependencies[] = update
+;dependencies[] = update
 
 ; 3RD PARTY MODULES
 dependencies[] = ctools
 dependencies[] = features
+dependencies[] = devel
 dependencies[] = entity
 dependencies[] = entity_token
 dependencies[] = rules
@@ -40,6 +41,7 @@ dependencies[] = smtp
 dependencies[] = advanced_help
 dependencies[] = og
 dependencies[] = homebox
+dependencies[] = autologout
 ; END OF 3RD PARTY MODULES
 
 

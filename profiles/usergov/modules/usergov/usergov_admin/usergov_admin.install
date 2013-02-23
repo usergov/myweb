@@ -1,0 +1,63 @@
+<?php
+
+  function usergov_admin_install() {
+
+    // Setting up variables with default values
+    $app_settings = _usergov_admin_variable_set();
+    if (is_array($app_settings) && count($app_settings)) {
+      foreach ($app_settings as $variable_name => $variable_value) {
+        variable_set($variable_name, $variable_value);
+      }
+    }
+
+    // Theme settings
+    $default_themes = array(
+      'admin_theme'   => $app_settings['admin_theme'],
+      'theme_default' => $app_settings['theme_default'],
+    );
+    theme_enable($default_themes);
+    theme_disable(array('bartik', 'seven'));
+
+    // Default blocks
+    require_once "usergov_admin.install.inc";
+    $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'visibility'));
+    foreach ($default_blocks as $record) {
+      $query->values($record);
+    }
+    $query->execute();
+
+    // Configuring default adaptive theme settings
+    _workspace_admin_adaptive_theme_set();
+
+    cache_clear_all();
+  }
+
+  function _usergov_admin_variable_set() {
+    $settings_ini_path = drupal_get_path('module', 'usergov_admin') . "/inc/settings.ini";
+    $custom_file      = 'public://usergov/settings.ini';
+    $settings_ini = array();
+
+    if (file_exists($settings_ini_path)) {
+      $settings_set = parse_ini_file($settings_ini_path, true);
+
+      if (is_array($settings_set) && count($settings_set)) {
+        $settings_ini = array_merge($settings_ini, $settings_set);
+      }
+    }
+
+    if (file_exists($custom_file)) {
+      $settings_set = parse_ini_file($custom_file, true);
+
+      if (is_array($settings_set) && count($settings_set)) {
+        $settings_ini = array_merge($settings_ini, $settings_set);
+      }
+    }
+
+    if(count($settings_ini)){
+      return $settings_ini;
+    }
+    else {
+      return FALSE;
+    }
+
+  }
