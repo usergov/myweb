@@ -1,0 +1,50 @@
+name = Demo
+description = Install with commonly used features pre-configured.
+version = VERSION
+core = 7.x
+
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = toolbar
+;dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+dependencies[] = update
+
+; 3RD PARTY MODULES
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = rules
+dependencies[] = rules_admin
+dependencies[] = rules_scheduler
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = smtp
+dependencies[] = advanced_help
+dependencies[] = og
+dependencies[] = homebox
+; END OF 3RD PARTY MODULES
+
+
+; Information added by drupal.org packaging script on 2012-05-02
+version = "7.15"
+project = "drupal"
+datestamp = "1335997555"
+
