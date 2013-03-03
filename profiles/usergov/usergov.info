@@ -46,6 +46,10 @@ dependencies[] = field_permissions
 dependencies[] = user_permissions
 ; END OF 3RD PARTY MODULES
 
+; USERGOV MODULES
+dependencies[] = usergov_admin
+; END OF USERGOV MODULES
+
 
 ; Information added by drupal.org packaging script on 2012-05-02
 version = "7.15"
