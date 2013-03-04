@@ -42,6 +42,7 @@ dependencies[] = advanced_help
 dependencies[] = og
 dependencies[] = homebox
 dependencies[] = autologout
+dependencies[] = coder
 dependencies[] = field_permissions
 dependencies[] = user_permissions
 ; END OF 3RD PARTY MODULES
