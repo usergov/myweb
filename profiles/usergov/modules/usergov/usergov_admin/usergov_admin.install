@@ -11,13 +11,16 @@
     }
 
     // Theme settings
-    $default_themes = array(
-      'admin_theme'   => $app_settings['admin_theme'],
-      'theme_default' => $app_settings['theme_default'],
-    );
+    if($app_settings['admin_theme'] && $app_settings['theme_default']){
+        $default_themes = array(
+        'admin_theme'   => $app_settings['admin_theme'],
+        'theme_default' => $app_settings['theme_default'],
+      );
+      
+      theme_enable($default_themes);
+      theme_disable(array('bartik', 'seven'));
+    }
     
-    theme_enable($default_themes);
-    theme_disable(array('bartik', 'seven'));
 
     // Default blocks
     // require_once "usergov_admin.install.inc";
