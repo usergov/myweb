@@ -54,9 +54,9 @@ dependencies[] = profile2_og_access
 dependencies[] = profile2_page
 dependencies[] = autologout
 dependencies[] = coder
-dependencies[] = field_permissions
-dependencies[] = user_permissions
-dependencies[] = content_access
+;dependencies[] = field_permissions
+;dependencies[] = user_permissions
+;dependencies[] = content_access
 ; END OF 3RD PARTY MODULES
 
 ; USERGOV MODULES
