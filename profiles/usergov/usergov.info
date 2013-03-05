@@ -45,6 +45,7 @@ dependencies[] = autologout
 dependencies[] = coder
 dependencies[] = field_permissions
 dependencies[] = user_permissions
+dependencies[] = content_access
 ; END OF 3RD PARTY MODULES
 
 ; USERGOV MODULES
