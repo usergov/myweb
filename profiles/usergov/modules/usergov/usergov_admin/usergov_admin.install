@@ -15,6 +15,7 @@
       'admin_theme'   => $app_settings['admin_theme'],
       'theme_default' => $app_settings['theme_default'],
     );
+    
     theme_enable($default_themes);
     theme_disable(array('bartik', 'seven'));
 
